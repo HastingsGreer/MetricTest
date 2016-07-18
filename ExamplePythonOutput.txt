@@ -1,0 +1,84 @@
+Before transform changes:
+EuclideanDistancePointSetToPointSetMetricv4 (0x456ae40)
+  RTTI typeinfo:   itk::EuclideanDistancePointSetToPointSetMetricv4<itk::PointSet<unsigned int, 2u, itk::DefaultStaticMeshTraits<unsigned int, 2u, 2u, float, float, unsigned int> >, itk::PointSet<unsigned int, 2u, itk::DefaultStaticMeshTraits<unsigned int, 2u, 2u, float, float, unsigned int> >, double>
+  Reference Count: 1
+  Modified Time: 7
+  Debug: Off
+  Object Name: 
+  Observers: 
+    none
+  Value: 0
+  GradientSourceType: GRADIENT_SOURCE_FIXED
+  ObjectToObjectMetric: 
+  FixedTransform: 
+    IdentityTransform (0x4547c80)
+      RTTI typeinfo:   itk::IdentityTransform<double, 2u>
+      Reference Count: 1
+      Modified Time: 2
+      Debug: Off
+      Object Name: 
+      Observers: 
+        none
+  MovingTransform: 
+    TranslationTransform (0x45cbd80)
+      RTTI typeinfo:   itk::TranslationTransform<double, 2u>
+      Reference Count: 2
+      Modified Time: 1
+      Debug: Off
+      Object Name: 
+      Observers: 
+        none
+      Offset: [0, 0]
+  VirtualImage: (null)
+  m_UserHasSetVirtualDomain: 0
+  m_NumberOfValidPoints: 0
+  Fixed PointSet: 0x4542d20
+  Fixed Transform: 0x4547c80
+  Moving PointSet: 0x4520270
+  Moving Transform: 0x45cbd80
+  Store derivative as sparse field = true.
+  Calculate in tangent space = false.
+
+value: 0.0
+After metric changes:
+EuclideanDistancePointSetToPointSetMetricv4 (0x456ae40)
+  RTTI typeinfo:   itk::EuclideanDistancePointSetToPointSetMetricv4<itk::PointSet<unsigned int, 2u, itk::DefaultStaticMeshTraits<unsigned int, 2u, 2u, float, float, unsigned int> >, itk::PointSet<unsigned int, 2u, itk::DefaultStaticMeshTraits<unsigned int, 2u, 2u, float, float, unsigned int> >, double>
+  Reference Count: 1
+  Modified Time: 7
+  Debug: Off
+  Object Name: 
+  Observers: 
+    none
+  Value: 0
+  GradientSourceType: GRADIENT_SOURCE_FIXED
+  ObjectToObjectMetric: 
+  FixedTransform: 
+    IdentityTransform (0x4547c80)
+      RTTI typeinfo:   itk::IdentityTransform<double, 2u>
+      Reference Count: 1
+      Modified Time: 2
+      Debug: Off
+      Object Name: 
+      Observers: 
+        none
+  MovingTransform: 
+    TranslationTransform (0x45cbd80)
+      RTTI typeinfo:   itk::TranslationTransform<double, 2u>
+      Reference Count: 2
+      Modified Time: 4
+      Debug: Off
+      Object Name: 
+      Observers: 
+        none
+      Offset: [200, 200]
+  VirtualImage: (null)
+  m_UserHasSetVirtualDomain: 0
+  m_NumberOfValidPoints: 1
+  Fixed PointSet: 0x4542d20
+  Fixed Transform: 0x4547c80
+  Moving PointSet: 0x4520270
+  Moving Transform: 0x45cbd80
+  Store derivative as sparse field = true.
+  Calculate in tangent space = false.
+
+value: 0.0
