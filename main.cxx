@@ -41,9 +41,10 @@ int itkEuclideanDistancePointSetMetricTestRun()
   metric->Initialize();
 
   typename PointSetMetricType::MeasureType value = metric->GetValue();
-
-  std::cout << "value: " << value << std::endl;
   
+  std::cout << "Before Transform changes" << std::endl;
+  std::cout << "value: " << value << std::endl;
+  std::cout << metric << std::endl;
   
   typedef typename PointSetMetricType::DerivativeType Params;
   
@@ -51,11 +52,12 @@ int itkEuclideanDistancePointSetMetricTestRun()
   optP.SetSize(2);
   optP.SetElement(0, 100);
   optP.SetElement(1, 100);
-  std::cout << metric << std::endl;
   metric->UpdateTransformParameters(optP, 1);
-  std::cout << metric << std::endl;
+  
+  std::cout << "After Transform Changes" << std::endl;
   value = metric->GetValue();
   std::cout << "value: " << value << std::endl;
+  std::cout << metric << std::endl;
   
   return 0;
 }

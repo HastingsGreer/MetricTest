@@ -1,0 +1,1 @@
+The value of the metric does not change in the python script because when the parameters of the transform are updated, the Mtime of the transform is increased but is not increased as much as it should be, causing it to still appear older than the metric. This behavior is absent in the C++ port of the same series of function calls.

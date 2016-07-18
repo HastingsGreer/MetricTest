@@ -33,32 +33,18 @@ def test():
     metric.Initialize()
 
     print "Before transform changes:"
-    print metric.GetValue()
+    print metric
+    print "value:", metric.GetValue()
     
-    print metric.GetFixedPointSet().GetPoint(0)
-    #print metric.GetTransformedFixedPointSet().GetPoint(0)
-    print metric.GetMovingPointSet().GetPoint(0)
-    print metric.GetModifiableFixedTransformedPointSet().GetPoint(0)
-    print metric.GetTransform()
     optP = itk.Array[itk.D]()
     optP.SetSize(2)
     optP.SetElement(0, 100)
-    
     optP.SetElement(1, 100)
-    print metric
+
     metric.UpdateTransformParameters(optP, 2)
+    
     print "After metric changes:"
     print metric
-    
-    print metric.GetValue()
-    
-    print metric.GetFixedPointSet().GetPoint(0)
-    #print metric.GetTransformedFixedPointSet().GetPoint(0)
-    print metric.GetMovingPointSet().GetPoint(0)
-    print metric.GetModifiableFixedTransformedPointSet().GetPoint(0)
-    print metric.GetTransform()
+    print "value:", metric.GetValue()
 
-    
-    
-test()
 test()
