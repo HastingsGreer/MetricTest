@@ -5,9 +5,9 @@
 #include <fstream>
 
 
-template<unsigned int Dimension>
 int itkEuclideanDistancePointSetMetricTestRun()
 {
+  const int Dimension = 2;
   typedef itk::PointSet<unsigned char, Dimension> PointSetType;
 
   typedef typename PointSetType::PointType PointType;
@@ -51,8 +51,9 @@ int itkEuclideanDistancePointSetMetricTestRun()
   optP.SetSize(2);
   optP.SetElement(0, 100);
   optP.SetElement(1, 100);
-  
+  std::cout << metric << std::endl;
   metric->UpdateTransformParameters(optP, 1);
+  std::cout << metric << std::endl;
   value = metric->GetValue();
   std::cout << "value: " << value << std::endl;
   
@@ -61,8 +62,6 @@ int itkEuclideanDistancePointSetMetricTestRun()
 
 int main( int, char* [] )
 {
-  itkEuclideanDistancePointSetMetricTestRun<2>();
-  itkEuclideanDistancePointSetMetricTestRun<2>();
-
+  itkEuclideanDistancePointSetMetricTestRun();
   return 0;
 }
